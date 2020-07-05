@@ -9,5 +9,5 @@ I bought [this one][1] and I soldered on the included pins for prototyping, as w
 
 ## References
 
-[OLED Driver (Luma.oled)](https://luma-oled.readthedocs.io/en/latest/intro.html)
-[luma.examples](https://github.com/rm-hull/luma.examples)
+* [OLED Driver (Luma.oled)](https://luma-oled.readthedocs.io/en/latest/intro.html)
+* [luma.examples](https://github.com/rm-hull/luma.examples)

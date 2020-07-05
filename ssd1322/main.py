@@ -4,7 +4,8 @@ import time
 import datetime
 import sys
 
-from luma.core.render import canvas, cmdline, error
+from luma.core.render import canvas
+from luma.core import cmdline, error
 
 def get_device(actual_args=None):
     """

@@ -21,8 +21,6 @@ def get_device(actual_args=None):
         config = cmdline.load_config(args.config)
         args = parser.parse_args(config + actual_args)
 
-    print(display_settings(args))
-
     # create device
     try:
         device = cmdline.create_device(args)
@@ -30,7 +28,6 @@ def get_device(actual_args=None):
         parser.error(e)
 
     return device
-
 
 def main():
     today_last_time = "Unknown"

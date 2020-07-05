@@ -7,6 +7,12 @@ I bought [this one][1] and I soldered on the included pins for prototyping, as w
 [1]: https://www.aliexpress.com/item/32988174566.html
 [2]: https://github.com/balenalabs/uk-train-departure-display#configuration
 
+## Getting started
+
+```bash
+sudo -H pip3 install -r requirements.txt
+```
+
 ## References
 
 * [OLED Driver (Luma.oled)](https://luma-oled.readthedocs.io/en/latest/intro.html)

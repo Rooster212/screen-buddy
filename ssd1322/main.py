@@ -2,8 +2,34 @@
 import math
 import time
 import datetime
-from demo_opts import get_device
-from luma.core.render import canvas
+import sys
+
+from luma.core.render import canvas, cmdline, error
+
+def get_device(actual_args=None):
+    """
+    Create device from command-line arguments and return it.
+    """
+    if actual_args is None:
+        actual_args = sys.argv[1:]
+    parser = cmdline.create_parser(description='luma.examples arguments')
+    args = parser.parse_args(actual_args)
+
+    if args.config:
+        # load config from file
+        config = cmdline.load_config(args.config)
+        args = parser.parse_args(config + actual_args)
+
+    print(display_settings(args))
+
+    # create device
+    try:
+        device = cmdline.create_device(args)
+    except error.Error as e:
+        parser.error(e)
+
+    return device
+
 
 def main():
     today_last_time = "Unknown"

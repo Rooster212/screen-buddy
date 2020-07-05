@@ -32,7 +32,7 @@ def get_device(actual_args=None):
 def main():
     today_last_time = "Unknown"
     margin = 4
-    cx = 30
+    cx = 0
     cy = min(device.height, 64) / 2
     left = cx - cy
     right = cx + cy

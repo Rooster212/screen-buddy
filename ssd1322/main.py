@@ -7,6 +7,8 @@ import sys
 from luma.core.render import canvas
 from luma.core import cmdline, error
 
+from PIL import ImageFont
+
 def get_device(actual_args=None):
     """
     Create device from command-line arguments and return it.
@@ -36,6 +38,8 @@ def main():
     cy = min(device.height, 64) / 2
     left = cx - cy
     right = cx + cy
+    fontSize=10
+    dotMatrixFont = ImageFont.truetype("Dot Matrix Regular.ttf", fontSize)
 
     while True:
         now = datetime.datetime.now()
@@ -45,8 +49,8 @@ def main():
         if today_time != today_last_time:
             today_last_time = today_time
             with canvas(device) as draw:
-                draw.text((2 * (cx + margin), cy - 8), today_date, fill="yellow")
-                draw.text((2 * (cx + margin), cy), today_time, fill="yellow")
+                draw.text((0 + margin, cy - fontSize), today_date, fill="yellow", font=dotMatrixFont)
+                draw.text((0 + margin, cy), today_time, fill="yellow", font=dotMatrixFont)
 
         time.sleep(0.1)
 

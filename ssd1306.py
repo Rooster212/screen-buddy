@@ -8,6 +8,8 @@ from luma.core import cmdline, error
 
 from PIL import ImageFont
 
+import weather
+
 def get_device(actual_args=None):
     """
     Create device from command-line arguments and return it.
@@ -37,8 +39,8 @@ def main():
     cy = min(device.height, 64) / 2
     left = cx - cy
     right = cx + cy
-    fontSize=24
-    dotMatrixFont = ImageFont.truetype("../Dot Matrix Regular.ttf", fontSize)
+    fontSize=10
+    dotMatrixFont = ImageFont.truetype("Dot Matrix Regular.ttf", fontSize)
     print("Displaying on screen now")
 
     while True:
@@ -49,8 +51,8 @@ def main():
         if today_time != today_last_time:
             today_last_time = today_time
             with canvas(device) as draw:
-                draw.text((0 + margin, cy - fontSize), today_date, fill="yellow", font=dotMatrixFont)
-                draw.text((0 + margin, cy), today_time, fill="yellow", font=dotMatrixFont)
+                draw.text((0 + margin, 2), today_date, fill="yellow", font=dotMatrixFont)
+                draw.text((device.width - (3.5*10), 2), today_time, fill="yellow", font=dotMatrixFont)
 
         time.sleep(0.1)
 

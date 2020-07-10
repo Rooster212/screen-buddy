@@ -41,6 +41,3 @@ def getWeather():
     locationName = weatherData["name"]
 
     print(f"{currentWeatherShort} ({currentWeatherLong}) in {locationName}")
-
-getWeather()
-

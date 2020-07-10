@@ -39,8 +39,6 @@ def main():
     right = cx + cy
     fontSize=10
     dotMatrixFont = ImageFont.truetype("../Dot Matrix Regular.ttf", fontSize)
-    print(device)
-
     print("Displaying on screen now")
 
     while True:

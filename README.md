@@ -1,11 +1,6 @@
 # Screen Buddy
 
-Little project to show certain things on (initially) the ssd1322 OLED display.
-
-I bought [this one][1] and I soldered on the included pins for prototyping, as well as changing a jumper to allow running in 4 pin SPI mode. It was delivered in 8080 mode which I'm not familiar with, and I found a great example [of using this screen in a project from Balena Labs][2] in SPI mode which helped, as the datasheet seems hard to find for this screen.
-
-[1]: https://www.aliexpress.com/item/32988174566.html
-[2]: https://github.com/balenalabs/uk-train-departure-display#configuration
+Little project to show certain things on (initially) the `ssd1322` and `ssd1306` OLED displays.
 
 ## Getting started
 
@@ -35,6 +30,8 @@ Display pin | Connection    | Raspberry Pi pin
 4           | Data          | 3 (`BCM3 / SDA`)
 
 ### `ssd1322`
+
+I bought [this one][1] and I soldered on the included pins for prototyping, as well as changing a jumper to allow running in 4 pin SPI mode. It was delivered in 8080 mode which I'm not familiar with, and I found a great example [of using this screen in a project from Balena Labs][2] in SPI mode which helped, as the datasheet seems hard to find for this screen.
 
 A OLED screen, the dimensions are 256x64. I bought it [from AliExpress a while ago from this listing](https://www.aliexpress.com/item/32988174566.html) (in yellow). It came supplied in 8080 mode, I changed it using the jumpers on the back into 4-pin SPI mode (as that was what the Balenalabs example was in, which allowed me to follow the pinout!)
 

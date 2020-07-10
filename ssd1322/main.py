@@ -38,8 +38,7 @@ def main():
     left = cx - cy
     right = cx + cy
     fontSize=24
-    dotMatrixFont = ImageFont.truetype("Dot Matrix Regular.ttf", fontSize)
-
+    dotMatrixFont = ImageFont.truetype("../Dot Matrix Regular.ttf", fontSize)
     print("Displaying on screen now")
 
     while True:
